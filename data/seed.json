@@ -1,0 +1,30 @@
+{
+  "name": "/",
+  "directories": [
+    {
+      "name": "documents",
+      "directories": [],
+      "files": [
+        {"name": "cv.pdf", "size": 120},
+        {"name": "notes.txt", "size": 45}
+      ]
+    },
+    {
+      "name": "projects",
+      "directories": [
+        {
+          "name": "app1",
+          "directories": [],
+          "files": [
+            {"name": "main.py", "size": 10},
+            {"name": "utils.py", "size": 7}
+          ]
+        }
+      ],
+      "files": []
+    }
+  ],
+  "files": [
+    {"name": "readme.md", "size": 5}
+  ]
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directory Size Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        #output { background: #f4f4f4; padding: 10px; min-height: 100px; margin-bottom: 10px; }
+        #cwd { font-weight: bold; }
+        input[type=text] { width: 300px; padding: 5px; }
+        button { padding: 5px 10px; }
+    </style>
+</head>
+<body>
+    <h2>Directory Size Calculator</h2>
+    <div>Current Directory: <span id="cwd">root</span></div>
+    <div id="output"></div>
+    <form id="cmdForm">
+        <input type="text" id="cmdInput" placeholder="Enter command (ls, cd <dir>, size)" autocomplete="off" />
+        <button type="submit">Run</button>
+    </form>
+    <script>
+        const form = document.getElementById('cmdForm');
+        const input = document.getElementById('cmdInput');
+        const output = document.getElementById('output');
+        const cwd = document.getElementById('cwd');
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const cmd = input.value;
+            if (!cmd) return;
+            const res = await fetch('/command', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cmd })
+            });
+            const data = await res.json();
+            output.textContent = data.output;
+            cwd.textContent = data.cwd;
+            input.value = '';
+        };
+    </script>
+</body>
+</html>
