@@ -84,6 +84,14 @@ To run the web-based UI:
 
 You can enter commands (`ls`, `cd <dir>`, `size`) in the web interface and see the output instantly.
 
+---
+## Hosted Version
+
+The app is deployed and publicly accessible at:
+**https://directory-size-calculator.onrender.com**
+
+You can use all commands (`ls`, `cd <dir>`, `size`) directly in the browser.
+
 Example usage:
 
 /> ls

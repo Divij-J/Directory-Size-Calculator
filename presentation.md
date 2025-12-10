@@ -34,12 +34,25 @@
 
 ## 3. How to Run, Test, and Verify
 
-### Run
-main.py
+### Run Locally
+```bash
+pip install -r requirements.txt
+python main.py
+```
+### Web UI (Flask)
+```bash
+python app/webapp.py
+```
+Visit [http://localhost:5000](http://localhost:5000)
+
+### Hosted Version
+The app is deployed at:
+**https://directory-size-calculator.onrender.com**
+Use all commands (`ls`, `cd <dir>`, `size`) in the browser.
 
 ### Test
+```bash
 pytest
-
 
 ### Verify
 - Use `ls` to list files and directories.
@@ -55,9 +68,3 @@ pytest
   - recursion  
   - navigation  
   - command shell behavior  
-
----
-
-## Optional Hosted Version
-A hosted version may be provided using:
-
