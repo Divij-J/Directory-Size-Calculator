@@ -22,13 +22,38 @@
 
 ---
 
+
 ## 2. Key Files & Folders
-- `app/filesystem.py` — core classes  
-- `app/shell.py` — command interpreter  
-- `app/loader.py` — loads JSON seed data  
-- `data/seed.json` — sample filesystem  
-- `main.py` — entry point  
-- `tests/` — unit tests  
+- `app/filesystem.py` — core classes for File and Directory
+- `app/shell.py` — command interpreter for CLI
+- `app/loader.py` — loads directory tree from JSON
+- `app/webapp.py` — Flask web server for UI
+- `app/templates/index.html` — Web UI frontend
+- `data/seed.json` — seed data for the filesystem
+- `main.py` — CLI entry point
+- `requirements.txt` — dependencies
+- `tests/` — unit tests
+
+### Project File Tree
+```
+Directory-Size-Calculator/
+├── app/
+│   ├── filesystem.py
+│   ├── loader.py
+│   ├── shell.py
+│   ├── webapp.py
+│   └── templates/
+│       └── index.html
+├── data/
+│   └── seed.json
+├── tests/
+│   ├── test_filesystem.py
+│   └── test_shell.py
+├── main.py
+├── requirements.txt
+├── readme.md
+└── presentation.md
+```
 
 ---
 

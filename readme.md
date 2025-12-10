@@ -41,19 +41,22 @@ A sample filesystem structure is stored in `data/seed.json` and loaded automatic
 
 ---
 
+
 ## Key Files & Folders
 
-| File | Description |
-|------|-------------|
-| `filesystem.py` | Contains `File` and `Directory` classes |
-| `shell.py` | Command interpreter providing CLI |
-| `loader.py` | Builds directory tree from JSON |
-| `seed.json` | Test/seed data for the filesystem |
-| `main.py` | Application entry point |
+| File/Folder | Description |
+|-------------|-------------|
+| `app/filesystem.py` | Core classes for File and Directory |
+| `app/shell.py` | Command interpreter for CLI |
+| `app/loader.py` | Loads directory tree from JSON |
+| `app/webapp.py` | Flask web server for UI |
+| `app/templates/index.html` | Web UI frontend |
+| `data/seed.json` | Seed data for the filesystem |
+| `main.py` | CLI entry point |
+| `requirements.txt` | Dependencies |
 | `tests/` | Unit tests |
 
 ---
-
 ## How to Run
 
 Clone the repo:
